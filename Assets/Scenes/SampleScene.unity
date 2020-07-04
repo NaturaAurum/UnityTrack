@@ -150,6 +150,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c791fb743f3f84ea40e1df41ae839d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vec1: {x: 0, y: 0, z: 1}
+  vec2: {x: -1, y: 0, z: 0}
+  p1: {x: -1, y: 0, z: 1}
+  p2: {x: 1, y: 0, z: 1}
+  ShowP1: 1
+  ShowP2: 0
 --- !u!4 &294182172
 Transform:
   m_ObjectHideFlags: 0
