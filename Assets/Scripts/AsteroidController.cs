@@ -11,6 +11,15 @@ public class AsteroidController : MonoBehaviour
     {
         
     }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        // 플레이어 총알에 맞으면 파괴
+        if (other.tag == "PlayerBullet")
+        {
+            Destroy(gameObject);
+        }
+    }
 
     // Update is called once per frame
     void Update()

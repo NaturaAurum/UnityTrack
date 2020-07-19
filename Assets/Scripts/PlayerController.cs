@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,8 +12,19 @@ public class PlayerController : MonoBehaviour
     private void GenerateBullet()
     {
         GameObject bullet = Instantiate(BulletPrefab, transform.position, Quaternion.identity);
+        // 플레이어가 생성하는 Bullet은 PlayerBullet tag를 가져야한다.
+        bullet.tag = "PlayerBullet";
         BulletController bulletController = bullet.GetComponent<BulletController>();
         bulletController.SetBulletDirection(Vector3.up);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // 충돌한 오브젝트의 tag가 PlayerBullet이 아닌 다른 오브젝트 일 경우 파.괴.한.다
+        if (other.tag != "PlayerBullet")
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
