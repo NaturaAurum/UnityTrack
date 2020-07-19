@@ -27,6 +27,7 @@ public class EnemyController : MonoBehaviour
         if (other.tag == "PlayerBullet")
         {
             Destroy(gameObject);
+            EventDispatcher.Dispatch("EnemyDied");
         }
     }
 

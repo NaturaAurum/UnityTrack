@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
 
     public GameObject BulletPrefab = null;
 
+    public bool Invincible = true;
+
     private void GenerateBullet()
     {
         GameObject bullet = Instantiate(BulletPrefab, transform.position, Quaternion.identity);
@@ -20,6 +22,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (Invincible)
+            return;
         // 충돌한 오브젝트의 tag가 PlayerBullet이 아닌 다른 오브젝트 일 경우 파.괴.한.다
         if (other.tag != "PlayerBullet")
         {

@@ -17,6 +17,7 @@ public class AsteroidController : MonoBehaviour
         // 플레이어 총알에 맞으면 파괴
         if (other.tag == "PlayerBullet")
         {
+            EventDispatcher.Dispatch("EnemyDied");
             Destroy(gameObject);
         }
     }
