@@ -5,23 +5,23 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 
-public class Player
-{
-    private int hp = 50;
-    private int power = 100;
-
-    public void Attack()
-    {
-        int power = 10;
-        this.power = power;
-        Damage(power);
-    }
-
-    public void Damage(int damage)
-    {
-        hp -= damage;
-    }
-}
+// public class Player
+// {
+//     private int hp = 50;
+//     private int power = 100;
+//
+//     public void Attack()
+//     {
+//         int power = 10;
+//         this.power = power;
+//         Damage(power);
+//     }
+//
+//     public void Damage(int damage)
+//     {
+//         hp -= damage;
+//     }
+// }
 
 
 /// <summary>
