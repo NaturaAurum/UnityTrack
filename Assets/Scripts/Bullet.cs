@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float BulletSpeed = 15f;
-    public Vector3 BulletDirection = Vector3.zero;
+    private Vector3 bulletDirection = Vector3.zero;
 
     // Start is called before the first frame update
     void Start()
@@ -13,9 +13,14 @@ public class Bullet : MonoBehaviour
         
     }
 
+    public void SetBulletDirection(Vector3 direction)
+    {
+        this.bulletDirection = direction;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        transform.position += BulletDirection * BulletSpeed * Time.deltaTime;
+        transform.position += bulletDirection * BulletSpeed * Time.deltaTime;
     }
 }

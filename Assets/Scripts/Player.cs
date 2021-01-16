@@ -5,11 +5,20 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float MoveSpeed = 10f;
+
+    public GameObject BulletPrefab;
     
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+
+    private void GenerateBullet()
+    {
+        GameObject bullet = Instantiate(BulletPrefab, transform.position, Quaternion.identity);
+        Bullet bulletController = bullet.GetComponent<Bullet>();
+        bulletController.SetBulletDirection(Vector3.up);
     }
 
     // Update is called once per frame
@@ -21,6 +30,11 @@ public class Player : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
 
         transform.position += new Vector3(horizontal, vertical, 0) * MoveSpeed * Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GenerateBullet();
+        }
 
         // if (Input.GetKey(KeyCode.W))
         // {

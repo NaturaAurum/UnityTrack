@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6835536751467407959}
   - component: {fileID: 6835536751466309783}
   - component: {fileID: 6835536753076645116}
+  - component: {fileID: 5022960514776706193}
   m_Layer: 0
   m_Name: vehicle_enemyShip
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6835536751468246615}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.35, y: 5.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -94,3 +95,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 5
+  BulletPrefab: {fileID: 5272873844112546310, guid: 003eb46d12a5d0940811b216ecba5f38,
+    type: 3}
+  BulletGenerateTime: 1
+--- !u!136 &5022960514776706193
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6835536751468246615}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.7480057
+  m_Height: 0.46537292
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.011736453, z: 0.3571211}

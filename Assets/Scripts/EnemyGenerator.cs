@@ -31,6 +31,6 @@ public class EnemyGenerator : MonoBehaviour
     {
         int randomIndex = Random.Range(0, Points.Length);
         Transform randomPoint = Points[randomIndex];
-        Instantiate(EnemyPrefab, randomPoint.position, Quaternion.identity);
+        Instantiate(EnemyPrefab, randomPoint.position, Quaternion.Euler(90f, 0, 180f));
     }
 }
